@@ -382,6 +382,19 @@ To run OPL, you need an entry point for running PS2 titles. You can use everythi
 <p>
 
 Open PS2 Loader needs the [**latest PS2SDK**](https://github.com/ps2dev/ps2sdk)
+## PS2SDK environment required
+```bash
+sudo mkdir -p /usr/local/ps2dev
+sudo chown -R $USER: $PS2DEV
+export PS2DEV=/usr/local/ps2dev
+export PS2SDK=$PS2DEV/ps2sdk
+export GSKIT=$PS2DEV/gsKit
+export PATH=$PATH:$PS2DEV/bin:$PS2DEV/ee/bin:$PS2DEV/iop/bin:$PS2DEV/dvp/bin:$PS2SDK/bin
+git clone https://github.com/azagramac/ps2dev
+cd ps2dev
+./build-all.sh
+./build-extra.sh
+```
 
 </p>
 </details>
